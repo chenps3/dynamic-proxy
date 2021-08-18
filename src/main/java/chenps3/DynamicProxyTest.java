@@ -1,6 +1,9 @@
 package chenps3;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Objects;
 
 /**
  * @Author chenguanhong
@@ -22,16 +25,32 @@ public class DynamicProxyTest {
     //getHelloName只是个示例，不可以写死判断
 
     //请实现方法createObject
+//    public static Object createObject(String str) throws Exception {
+//        String className = str.substring(0, str.lastIndexOf("$"));
+//        String methodName = str.substring(str.lastIndexOf("$") + 1, str.lastIndexOf("="));
+//        String arg = str.substring(str.lastIndexOf("=") + 1);
+//        Class<?> cls = Class.forName(className);
+//        return Proxy.newProxyInstance(cls.getClassLoader(), new Class[]{cls}, (proxy, method, args) -> {
+//            if (methodName.equals(method.getName())) {
+//                return arg;
+//            }
+//            return null;
+//        });
+//    }
+
     public static Object createObject(String str) throws Exception {
-        String className = str.substring(0, str.lastIndexOf("$"));
-        String methodName = str.substring(str.lastIndexOf("$") + 1, str.lastIndexOf("="));
-        String arg = str.substring(str.lastIndexOf("=") + 1);
-        Class<?> cls = Class.forName(className);
-        return Proxy.newProxyInstance(cls.getClassLoader(), new Class[]{cls}, (proxy, method, args) -> {
-            if (methodName.equals(method.getName())) {
-                return arg;
+        String[] split = str.split("[$=]");
+        Class<?> aClass = ClassLoader.getSystemClassLoader().loadClass(split[0]);
+        Object o = Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class[]{aClass}, new InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                if (Objects.equals(method.getName(), split[1])) {
+                    return split[2];
+                }
+                return null;
             }
-            return null;
         });
+        return o;
     }
 }
+
