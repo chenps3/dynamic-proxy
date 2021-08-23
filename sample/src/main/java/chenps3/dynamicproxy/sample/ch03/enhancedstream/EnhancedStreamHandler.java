@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch03.enhancedstream;
+package chenps3.dynamicproxy.sample.ch03.enhancedstream;
 
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;

@@ -1,11 +1,11 @@
-package chenps3.dynamicproxy.ch02.equals;
+package chenps3.dynamicproxy.sample.ch02.equals;
 
 /**
  * @Author chenguanhong
  * @Date 2021/8/17
  */
 
-import chenps3.dynamicproxy.ch02.virtual.ICustomMap;
+import chenps3.dynamicproxy.sample.ch02.virtual.ICustomMap;
 
 import java.util.HashMap;
 import java.util.function.BiConsumer;

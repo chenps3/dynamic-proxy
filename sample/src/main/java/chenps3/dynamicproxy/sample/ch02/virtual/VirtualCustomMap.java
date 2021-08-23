@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch02.virtual;
+package chenps3.dynamicproxy.sample.ch02.virtual;
 
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;

@@ -1,9 +1,9 @@
-package chenps3.dynamicproxy.sample;
+package chenps3.dynamicproxy;
 
-import chenps3.dynamicproxy.sample.handler.ExceptionUnwrappingInvocationHandler;
-import chenps3.dynamicproxy.sample.handler.SynchronizedHandler;
-import chenps3.dynamicproxy.sample.handler.VirtualProxyHandler;
-import chenps3.dynamicproxy.sample.util.MethodTurboBooster;
+import chenps3.dynamicproxy.handler.ExceptionUnwrappingInvocationHandler;
+import chenps3.dynamicproxy.handler.SynchronizedHandler;
+import chenps3.dynamicproxy.handler.VirtualProxyHandler;
+import chenps3.dynamicproxy.util.MethodTurboBooster;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

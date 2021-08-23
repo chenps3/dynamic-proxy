@@ -1,8 +1,8 @@
-package chenps3.dynamicproxy.test.handcraft.protect;
+package chenps3.dynamicproxy.protect;
 
 import chenps3.dynamicproxy.Proxies;
-import chenps3.dynamicproxy.ch02.virtual.CustomHashMap;
-import chenps3.dynamicproxy.ch02.virtual.ICustomMap;
+import chenps3.dynamicproxy.sample.ch02.virtual.CustomHashMap;
+import chenps3.dynamicproxy.sample.ch02.virtual.ICustomMap;
 import org.junit.Test;
 
 /**

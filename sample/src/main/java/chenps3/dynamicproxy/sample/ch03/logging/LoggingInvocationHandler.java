@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch03.logging;
+package chenps3.dynamicproxy.sample.ch03.logging;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

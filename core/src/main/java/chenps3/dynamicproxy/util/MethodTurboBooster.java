@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.sample.util;
+package chenps3.dynamicproxy.util;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;

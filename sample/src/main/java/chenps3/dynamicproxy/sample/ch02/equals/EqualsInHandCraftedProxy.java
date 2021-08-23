@@ -1,8 +1,7 @@
-package chenps3.dynamicproxy.ch02.equals;
+package chenps3.dynamicproxy.sample.ch02.equals;
 
-import chenps3.dynamicproxy.ch02.virtual.ICustomMap;
+import chenps3.dynamicproxy.sample.ch02.virtual.ICustomMap;
 
-import java.util.Objects;
 import java.util.function.BiConsumer;
 
 /**

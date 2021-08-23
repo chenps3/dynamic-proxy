@@ -1,9 +1,6 @@
-package chenps3;
+package chenps3.dynamicproxy.sample;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.Objects;
 
 /**
  * @Author chenguanhong

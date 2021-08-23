@@ -18,7 +18,7 @@
  * License.
  */
 
-package chenps3.dynamicproxy.sample.handler;
+package chenps3.dynamicproxy.handler;
 
 public interface BaseComponent<T> {
 

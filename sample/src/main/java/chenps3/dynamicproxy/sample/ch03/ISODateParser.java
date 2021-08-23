@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch03;
+package chenps3.dynamicproxy.sample.ch03;
 
 import java.text.ParseException;
 import java.time.LocalDate;

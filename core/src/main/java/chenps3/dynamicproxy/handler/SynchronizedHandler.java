@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.sample.handler;
+package chenps3.dynamicproxy.handler;
 
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;

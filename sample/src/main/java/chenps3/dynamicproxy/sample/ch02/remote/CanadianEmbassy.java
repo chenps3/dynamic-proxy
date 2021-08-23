@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch02.remote;
+package chenps3.dynamicproxy.sample.ch02.remote;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;

@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch02.virtual;
+package chenps3.dynamicproxy.sample.ch02.virtual;
 
 /**
  * @Author chenguanhong

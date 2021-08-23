@@ -1,4 +1,5 @@
-package chenps3.dynamicproxy.ch03.gotchas;
+package chenps3.dynamicproxy.sample.ch03.gotchas;
+
 
 import chenps3.dynamicproxy.Proxies;
 import chenps3.dynamicproxy.handler.BaseComponent;

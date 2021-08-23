@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.ch03.gotchas;
+package chenps3.dynamicproxy.sample.ch03.gotchas;
 
 import java.lang.reflect.Proxy;
 
