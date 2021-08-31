@@ -38,7 +38,7 @@ public final class MethodTurboBooster {
             if (!(proxy instanceof Proxy)) {
                 throw new IllegalArgumentException("只能优化Proxy实例");
             }
-            System.out.println("booster on " + proxy.getClass().getSimpleName());
+//            System.out.println("booster on " + proxy.getClass().getSimpleName());
             try {
                 for (var field : proxy.getClass().getDeclaredFields()) {
                     if (field.getType() == Method.class) {
@@ -59,7 +59,7 @@ public final class MethodTurboBooster {
             } catch (Exception e) {
                 //可能会报错，此时忽略，返回原方法即可
             }
-            System.out.println("booster on " + method.getName());
+//            System.out.println("booster on " + method.getName());
             return method;
         }
     }
@@ -71,13 +71,13 @@ public final class MethodTurboBooster {
             if (!(proxy instanceof Proxy)) {
                 throw new IllegalArgumentException("只能优化Proxy实例");
             }
-            System.out.println("booster off " + proxy.getClass().getSimpleName());
+//            System.out.println("booster off " + proxy.getClass().getSimpleName());
             return proxy;
         }
 
         @Override
         public Method turboBoost(Method method) {
-            System.out.println("booster off " + method.getName());
+//            System.out.println("booster off " + method.getName());
             return method;
         }
     }

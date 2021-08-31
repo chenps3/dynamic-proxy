@@ -1,4 +1,4 @@
-package chenps3.dynamicproxy.protect;
+package chenps3.dynamicproxy.sample.ch02.protect;
 
 import chenps3.dynamicproxy.Proxies;
 import chenps3.dynamicproxy.sample.ch02.virtual.CustomHashMap;

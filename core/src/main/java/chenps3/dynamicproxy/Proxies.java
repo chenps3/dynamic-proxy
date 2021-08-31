@@ -1,6 +1,7 @@
 package chenps3.dynamicproxy;
 
 import chenps3.dynamicproxy.handler.ExceptionUnwrappingInvocationHandler;
+import chenps3.dynamicproxy.handler.FilterHandler;
 import chenps3.dynamicproxy.handler.SynchronizedHandler;
 import chenps3.dynamicproxy.handler.VirtualProxyHandler;
 import chenps3.dynamicproxy.util.MethodTurboBooster;
@@ -50,5 +51,13 @@ public class Proxies {
     public static <S> S synchronizedProxy(Class<? super S> subjectInterface, S subject) {
         Objects.requireNonNull(subject, "subject==null");
         return castProxy(subjectInterface, new SynchronizedHandler<>(subject));
+    }
+
+    /**
+     * component过滤掉filter不支持的方法
+     */
+    public static <F> F filter(Class<? super F> filter, Object component) {
+        Objects.requireNonNull(component, "component is null");
+        return castProxy(filter, new FilterHandler(filter, component));
     }
 }
