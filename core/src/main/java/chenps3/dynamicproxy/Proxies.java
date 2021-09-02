@@ -1,9 +1,6 @@
 package chenps3.dynamicproxy;
 
-import chenps3.dynamicproxy.handler.ExceptionUnwrappingInvocationHandler;
-import chenps3.dynamicproxy.handler.FilterHandler;
-import chenps3.dynamicproxy.handler.SynchronizedHandler;
-import chenps3.dynamicproxy.handler.VirtualProxyHandler;
+import chenps3.dynamicproxy.handler.*;
 import chenps3.dynamicproxy.util.MethodTurboBooster;
 
 import java.lang.reflect.InvocationHandler;
@@ -59,5 +56,14 @@ public class Proxies {
     public static <F> F filter(Class<? super F> filter, Object component) {
         Objects.requireNonNull(component, "component is null");
         return castProxy(filter, new FilterHandler(filter, component));
+    }
+
+    /**
+     * 适配target接口
+     */
+    public static <T> T adapt(Class<? super T> target, Object adaptee, Object adapter) {
+        Objects.requireNonNull(adaptee, "adaptee==null");
+        Objects.requireNonNull(adaptee, "adapter==null");
+        return castProxy(target, new ObjectAdapterHandler(target, adaptee, adapter));
     }
 }
